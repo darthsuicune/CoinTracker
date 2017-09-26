@@ -7,4 +7,158 @@
     android:layout_height="match_parent"
     tools:context="com.dlgdev.cointracker.AddCoinActivity">
 
+    <TextView
+        android:id="@+id/amount_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:labelFor="@+id/amount_seek_bar"
+        android:text="@string/amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_spinner"/>
+
+    <SeekBar
+        android:id="@+id/amount_seek_bar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="355dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:max="7"
+        android:progress="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/amount_label"
+        app:layout_constraintTop_toBottomOf="@+id/amount_label"/>
+
+    <TextView
+        android:id="@+id/label_one_cent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/one_cent"
+        app:layout_constraintStart_toStartOf="@+id/amount_seek_bar"
+        app:layout_constraintTop_toBottomOf="@+id/amount_seek_bar"/>
+
+    <TextView
+        android:id="@+id/label_two_cent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/two_cent"
+        app:layout_constraintStart_toEndOf="@+id/label_one_cent"
+        app:layout_constraintTop_toTopOf="@+id/label_one_cent"/>
+
+    <TextView
+        android:id="@+id/label_five_cent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/five_cent"
+        app:layout_constraintStart_toEndOf="@+id/label_two_cent"
+        app:layout_constraintTop_toTopOf="@+id/label_two_cent"/>
+
+    <TextView
+        android:id="@+id/label_ten_cent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/ten_cent"
+        app:layout_constraintStart_toEndOf="@+id/label_five_cent"
+        app:layout_constraintTop_toTopOf="@+id/label_five_cent"/>
+
+    <TextView
+        android:id="@+id/label_twenty_cent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/twenty_cent"
+        app:layout_constraintStart_toEndOf="@+id/label_ten_cent"
+        app:layout_constraintTop_toTopOf="@+id/label_ten_cent"/>
+
+    <TextView
+        android:id="@+id/label_fifty_cent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/fifty_cent"
+        app:layout_constraintStart_toEndOf="@+id/label_twenty_cent"
+        app:layout_constraintTop_toTopOf="@+id/label_twenty_cent"/>
+
+    <TextView
+        android:id="@+id/label_one_euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/one_euro"
+        app:layout_constraintStart_toEndOf="@+id/label_fifty_cent"
+        app:layout_constraintTop_toTopOf="@+id/label_fifty_cent"/>
+
+    <TextView
+        android:id="@+id/label_two_euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/two_euro"
+        app:layout_constraintStart_toEndOf="@+id/label_one_euro"
+        app:layout_constraintTop_toTopOf="@+id/label_one_euro"/>
+
+    <TextView
+        android:id="@+id/description_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/description_label"
+        app:layout_constraintStart_toStartOf="@+id/amount_label"
+        app:layout_constraintTop_toBottomOf="@+id/label_one_cent"/>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="352dp"
+        android:layout_height="128dp"
+        android:ems="10"
+        android:inputType="textAutoCorrect|textMultiLine|textImeMultiLine"
+        android:singleLine="false"
+        app:layout_constraintEnd_toEndOf="@+id/amount_seek_bar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/description_label"
+        app:layout_constraintTop_toBottomOf="@+id/description_label"/>
+
+    <TextView
+        android:id="@+id/country_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/country"
+        app:layout_constraintStart_toEndOf="@+id/currency_spinner"
+        app:layout_constraintTop_toTopOf="@+id/currency_label"/>
+
+    <Spinner
+        android:id="@+id/country_spinner"
+        android:layout_width="196dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/currency_spinner"
+        app:layout_constraintStart_toStartOf="@+id/country_label"
+        app:layout_constraintTop_toBottomOf="@+id/country_label"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <TextView
+        android:id="@+id/currency_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/currency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Spinner
+        android:id="@+id/currency_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/currency_label"
+        app:layout_constraintTop_toBottomOf="@+id/currency_label"/>
 </android.support.constraint.ConstraintLayout>

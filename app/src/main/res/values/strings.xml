@@ -1,4 +1,28 @@
 <resources>
     <string name="app_name">Coin Tracker</string>
     <string name="action_settings">Settings</string>
+    <string name="amount">Amount</string>
+
+    <string-array name="coin_types">
+        <item>@string/one_cent</item>
+        <item>@string/two_cent</item>
+        <item>@string/five_cent</item>
+        <item>@string/ten_cent</item>
+        <item>@string/twenty_cent</item>
+        <item>@string/fifty_cent</item>
+        <item>@string/one_euro</item>
+        <item>@string/two_euro</item>
+    </string-array>
+
+    <string name="one_cent">1c</string>
+    <string name="two_cent">2c</string>
+    <string name="five_cent">5c</string>
+    <string name="ten_cent">10c</string>
+    <string name="twenty_cent">20c</string>
+    <string name="fifty_cent">50c</string>
+    <string name="one_euro">1€</string>
+    <string name="two_euro">2€</string>
+    <string name="description_label">Description</string>
+    <string name="currency">Currency</string>
+    <string name="country">Country</string>
 </resources>

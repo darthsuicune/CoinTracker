@@ -1,13 +1,19 @@
 package com.dlgdev.cointracker
 
+import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import com.dlgdev.cointracker.db.CoinDatabase
 import kotlinx.android.synthetic.main.activity_coin_list.*
+import kotlinx.android.synthetic.main.content_coin_list.*
 
 class CoinListActivity : AppCompatActivity() {
+
+    lateinit var db: CoinDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +23,10 @@ class CoinListActivity : AppCompatActivity() {
         fab.setOnClickListener { _ -> val intent = Intent(this, AddCoinActivity::class.java)
             startActivity(intent)
         }
+        db = Room.databaseBuilder(this, CoinDatabase::class.java, "coins.db").build()
+
+        coin_list_view.adapter = CoinAdapter()
+        coin_list_view.layoutManager = LinearLayoutManager(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
