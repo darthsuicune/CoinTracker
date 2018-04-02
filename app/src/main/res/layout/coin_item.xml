@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:orientation="vertical"
+                                             android:padding="8dp">
 
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/coin_item_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Amount"/>
+
+    <TextView
+        android:id="@+id/coin_item_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/coin_item_amount"
+        app:layout_constraintTop_toTopOf="@+id/coin_item_amount"
+        tools:text="Currency"/>
+
+    <TextView
+        android:id="@+id/coin_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/coin_item_amount"
+        app:layout_constraintTop_toBottomOf="@+id/coin_item_amount"
+        tools:text="Some description"/>
+
+    <ImageView
+        android:id="@+id/coin_item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/coin_item_currency"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:layout_editor_absoluteY="18dp"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/delete_coin_description"/>
+</android.support.constraint.ConstraintLayout>

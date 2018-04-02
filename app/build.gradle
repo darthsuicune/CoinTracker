@@ -4,12 +4,12 @@ apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.dlgdev.cointracker"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,21 +25,25 @@ android {
 dependencies {
     kapt compiler.room
     kapt compiler.lifecycle
+    kapt compiler.dagger
+    kapt compiler.dagger_compiler
+    kapt compiler.butterknife
 
-    compile runtime.design
-    compile runtime.appcompat
-    compile runtime.constraint_layout
-    compile runtime.kotlin_stdlib
-    compile runtime.room
-    compile runtime.lifecycle_extensions
-
+    implementation runtime.dagger
+    implementation runtime.butterknife
+    implementation runtime.design
+    implementation runtime.appcompat
+    implementation runtime.constraint_layout
+    implementation runtime.kotlin_stdlib
+    implementation runtime.room
+    implementation runtime.lifecycle_extensions
     implementation runtime.constraint_layout
 
-    testCompile test.junit
-    testCompile test.mockito_core
+    testImplementation test.junit
+    testImplementation test.mockito_core
 
-    androidTestCompile test.mockito_android
-    androidTestCompile(test.espresso_contrib, {
+    androidTestImplementation test.mockito_android
+    androidTestImplementation(test.espresso_contrib, {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }

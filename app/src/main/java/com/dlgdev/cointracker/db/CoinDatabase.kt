@@ -5,7 +5,7 @@ import android.arch.persistence.room.RoomDatabase
 import com.dlgdev.cointracker.Coin
 import com.dlgdev.cointracker.CoinDao
 
-@Database(entities = arrayOf(Coin::class), version = 1)
+@Database(entities = [(Coin::class)], version = 3, exportSchema = false)
 abstract class CoinDatabase: RoomDatabase() {
     abstract fun coinDao(): CoinDao
 }

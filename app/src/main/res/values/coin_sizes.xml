@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coin_amounts">
+        <item>@string/euros_2</item>
+        <item>@string/euros_1</item>
+        <item>@string/cents_50</item>
+        <item>@string/cents_20</item>
+        <item>@string/cents_10</item>
+        <item>@string/cents_5</item>
+        <item>@string/cents_2</item>
+        <item>@string/cents_1</item>
+    </string-array>
+    <string name="cents_1">1c</string>
+    <string name="cents_2">2c</string>
+    <string name="cents_5">5c</string>
+    <string name="cents_10">10c</string>
+    <string name="cents_20">20c</string>
+    <string name="cents_50">50c</string>
+    <string name="euros_1">1</string>
+    <string name="euros_2">2</string>
+</resources>
