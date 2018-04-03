@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Spinner
 import butterknife.BindView
 import butterknife.ButterKnife
+import com.dlgdev.cointracker.db.CoinDao
 import dagger.android.AndroidInjection
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
