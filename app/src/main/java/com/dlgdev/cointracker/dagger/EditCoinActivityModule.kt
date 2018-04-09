@@ -1,11 +1,11 @@
 package com.dlgdev.cointracker.dagger
 
-import com.dlgdev.cointracker.ui.CoinListActivity
+import com.dlgdev.cointracker.ui.EditCoinActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Module
-abstract class CoinListActivityModule {
+abstract class EditCoinActivityModule {
     @ContributesAndroidInjector
-    abstract fun contributeActivity(): CoinListActivity
+    abstract fun provideActivity(): EditCoinActivity
 }

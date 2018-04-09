@@ -11,10 +11,11 @@
     <TextView
         android:id="@+id/coin_item_amount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Amount"/>
@@ -22,9 +23,10 @@
     <TextView
         android:id="@+id/coin_item_currency"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
+        android:gravity="center"
         app:layout_constraintStart_toEndOf="@+id/coin_item_amount"
         app:layout_constraintTop_toTopOf="@+id/coin_item_amount"
         tools:text="Currency"/>
@@ -33,13 +35,23 @@
         android:id="@+id/coin_item_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/coin_item_amount"
-        app:layout_constraintTop_toBottomOf="@+id/coin_item_amount"
+        app:layout_constraintTop_toTopOf="@+id/delete_coin"
         tools:text="Some description"/>
 
     <ImageView
-        android:id="@+id/coin_item_delete"
+        android:id="@+id/delete_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/delete_coin_description"
+        app:layout_constraintStart_toStartOf="@+id/edit_coin"
+        app:layout_constraintTop_toBottomOf="@+id/edit_coin"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/edit_coin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -47,10 +59,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.961"
         app:layout_constraintStart_toEndOf="@+id/coin_item_currency"
-        app:srcCompat="@android:drawable/ic_menu_delete"
-        tools:layout_editor_absoluteY="18dp"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/delete_coin_description"/>
+        app:layout_constraintTop_toTopOf="@+id/coin_item_amount"
+        app:srcCompat="@android:drawable/ic_menu_edit"/>
 </android.support.constraint.ConstraintLayout>

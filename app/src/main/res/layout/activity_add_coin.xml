@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dlgdev.cointracker.AddCoinActivity">
+    tools:context="com.dlgdev.cointracker.ui.AddCoinActivity">
 
     <Spinner
         android:id="@+id/coin_amount"
@@ -14,9 +13,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:entries="@array/coin_amounts"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:entries="@array/coin_amounts"/>
 
     <Spinner
         android:id="@+id/coin_currency"
@@ -24,19 +21,41 @@
         android:layout_height="48dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:entries="@array/coin_currencies"
-        app:layout_constraintStart_toEndOf="@+id/coin_amount"
-        app:layout_constraintTop_toTopOf="@+id/coin_amount"/>
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/coin_amount"
+        android:layout_toEndOf="@id/coin_amount"
+        android:entries="@array/coin_currencies"/>
 
     <EditText
         android:id="@+id/coin_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/coin_description_hint"
         android:inputType="textMultiLine"
-        app:layout_constraintStart_toStartOf="@+id/coin_amount"
-        app:layout_constraintTop_toBottomOf="@+id/coin_amount"
+        android:layout_below="@id/coin_amount"
         tools:text="ThisIsSomeCoin"/>
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/coin_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:alpha="0.5"
+        android:layout_below="@id/coin_description"
+        android:contentDescription="@string/coin_picture_description"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/coin_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/coin_placeholder"
+        android:layout_below="@id/coin_description"/>
+</RelativeLayout>

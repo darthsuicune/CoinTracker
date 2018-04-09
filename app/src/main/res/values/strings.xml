@@ -9,4 +9,7 @@
     <string name="delete_coin_dialog_text">Do you really want to delete this coin?</string>
     <string name="ok">Yes</string>
     <string name="no">Nope</string>
+    <string name="apply_edit_coin">Apply Edit</string>
+    <string name="coin_picture_description">Optional, picture of a coin. Click here to change it</string>
+    <string name="coin_placeholder">Click here to add a picture from the gallery</string>
 </resources>

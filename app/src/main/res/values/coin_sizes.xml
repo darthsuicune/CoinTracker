@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="coin_amounts">
-        <item>@string/euros_2</item>
-        <item>@string/euros_1</item>
+        <item>@string/full_2</item>
+        <item>@string/full_1</item>
+        <item>@string/full_5</item>
         <item>@string/cents_50</item>
+        <item>@string/cents_25</item>
         <item>@string/cents_20</item>
         <item>@string/cents_10</item>
         <item>@string/cents_5</item>
         <item>@string/cents_2</item>
         <item>@string/cents_1</item>
+        <item>@string/full_10</item>
+        <item>@string/full_20</item>
+        <item>@string/full_25</item>
+        <item>@string/full_50</item>
+        <item>@string/full_100</item>
+        <item>@string/full_200</item>
+        <item>@string/full_500</item>
     </string-array>
     <string name="cents_1">1c</string>
     <string name="cents_2">2c</string>
     <string name="cents_5">5c</string>
     <string name="cents_10">10c</string>
     <string name="cents_20">20c</string>
+    <string name="cents_25">25c</string>
     <string name="cents_50">50c</string>
-    <string name="euros_1">1</string>
-    <string name="euros_2">2</string>
+    <string name="full_1">1</string>
+    <string name="full_2">2</string>
+    <string name="full_5">2</string>
+    <string name="full_10">10</string>
+    <string name="full_20">20</string>
+    <string name="full_25">25</string>
+    <string name="full_50">50</string>
+    <string name="full_100">100</string>
+    <string name="full_200">200</string>
+    <string name="full_500">500</string>
 </resources>

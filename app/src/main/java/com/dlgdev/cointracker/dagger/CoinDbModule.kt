@@ -6,14 +6,19 @@ import com.dlgdev.cointracker.db.CoinDao
 import com.dlgdev.cointracker.db.CoinDatabase
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 class CoinDbModule(val context: Context) {
 
-    @Provides
-    fun provideCoinDb(): CoinDao {
+    @Singleton
+    @Provides fun provideCoinDb(): CoinDatabase {
         return Room.databaseBuilder(context, CoinDatabase::class.java, "coins.db")
                 .fallbackToDestructiveMigration()
-                .build().coinDao()
+                .build()
+    }
+
+    @Provides fun provideCoinDao(db: CoinDatabase): CoinDao {
+        return db.coinDao()
     }
 }

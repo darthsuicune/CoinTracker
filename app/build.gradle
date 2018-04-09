@@ -8,7 +8,7 @@ android {
     buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.dlgdev.cointracker"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -29,6 +29,7 @@ dependencies {
     kapt compiler.dagger_compiler
     kapt compiler.butterknife
 
+    implementation runtime.picasso
     implementation runtime.dagger
     implementation runtime.butterknife
     implementation runtime.design

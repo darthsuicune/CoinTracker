@@ -5,7 +5,7 @@ ext {
     def butterknife_version = "8.8.1"
     def dagger_version = "2.14.1"
     def architecture_version = "1.1.1"
-    def room_version = "1.0.0"
+    def room_version = "1.1.0-beta2"
     compiler = [
             butterknife    : "com.jakewharton:butterknife-compiler:${butterknife_version}",
             dagger         : "com.google.dagger:dagger-android-processor:${dagger_version}",
@@ -19,7 +19,9 @@ ext {
     //Runtime
     def support_library_version = "27.1.0"
     def constraint_layout_version = "1.0.2"
+    def picasso_version = "2.71828"
     runtime = [
+            picasso             : "com.squareup.picasso:picasso:${picasso_version}",
             butterknife         : "com.jakewharton:butterknife:${butterknife_version}",
             dagger              : "com.google.dagger:dagger-android-support:${dagger_version}",
             appcompat           : "com.android.support:appcompat-v7:${support_library_version}",
@@ -54,7 +56,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:3.1.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong

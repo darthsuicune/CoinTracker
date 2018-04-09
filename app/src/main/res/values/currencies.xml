@@ -2,7 +2,21 @@
 <resources>
     <string-array name="coin_currencies">
         <item>@string/euro</item>
+        <item>@string/dolar</item>
+        <item>@string/peso_mex</item>
+        <item>@string/pesetas</item>
+        <item>@string/escudo_port</item>
+        <item>@string/pound</item>
+        <item>@string/franc</item>
+        <item>@string/dirham</item>
     </string-array>
 
     <string name="euro">€</string>
+    <string name="dolar">$</string>
+    <string name="peso_mex">$ (Mex)</string>
+    <string name="pesetas">Pts</string>
+    <string name="escudo_port">Esc (Port)</string>
+    <string name="pound">Pound</string>
+    <string name="franc">Fr (Fra)</string>
+    <string name="dirham">Dirham</string>
 </resources>
