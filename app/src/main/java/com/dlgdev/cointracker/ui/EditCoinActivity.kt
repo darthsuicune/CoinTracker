@@ -23,7 +23,7 @@ import javax.inject.Inject
 
 class EditCoinActivity : DaggerAppCompatActivity() {
     companion object {
-        val KEY_ID = "id"
+        const val KEY_ID = "id"
     }
 
     @Inject lateinit var coinDao: CoinDao
@@ -100,7 +100,9 @@ class EditCoinActivity : DaggerAppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.apply_edit -> {
-                editCoin(); true
+                editCoin()
+                finish()
+                true
             }
             else -> super.onOptionsItemSelected(item)
         }

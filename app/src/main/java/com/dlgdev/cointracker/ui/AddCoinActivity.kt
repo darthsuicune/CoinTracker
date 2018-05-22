@@ -67,7 +67,9 @@ class AddCoinActivity : DaggerAppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.action_add_coin -> {
-                addCoin(); true
+                addCoin()
+                finish()
+                true
             }
             else -> super.onOptionsItemSelected(item)
         }
