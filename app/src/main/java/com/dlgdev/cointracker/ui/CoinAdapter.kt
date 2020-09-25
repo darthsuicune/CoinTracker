@@ -43,12 +43,12 @@ class CoinAdapter @Inject constructor(val activity: CoinListActivity, val coinDa
             AlertDialog.Builder(viewHolder.amount.context)
                     .setTitle(R.string.delete_coin_dialog_title)
                     .setMessage(R.string.delete_coin_dialog_text)
-                    .setPositiveButton(R.string.ok, { _, _ ->
+                    .setPositiveButton(R.string.ok) { _, _ ->
                         DeleteCoinTask().execute(coin)
-                    })
-                    .setNegativeButton(R.string.no, { _, _ ->
+                    }
+                    .setNegativeButton(R.string.no) { _, _ ->
                         //Do nothing
-                    })
+                    }
                     .create()
                     .show()
         }

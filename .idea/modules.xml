@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CoinTracker.iml" filepath="$PROJECT_DIR$/CoinTracker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CoinTracker.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CoinTracker.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.teamcity/WorkTests_VersionedSettingsSubProject_dsl.iml" filepath="$PROJECT_DIR$/.teamcity/WorkTests_VersionedSettingsSubProject_dsl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.teamcity/_Root_dsl.iml" filepath="$PROJECT_DIR$/.teamcity/_Root_dsl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/verset/verset.iml" filepath="$PROJECT_DIR$/verset/verset.iml" />
     </modules>
   </component>
 </project>
