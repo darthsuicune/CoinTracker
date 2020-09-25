@@ -25,7 +25,7 @@ class CoinListActivity : DaggerAppCompatActivity() {
         setContentView(R.layout.activity_coin_list)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { _ ->
+        fab.setOnClickListener {
             val intent = Intent(this, AddCoinActivity::class.java)
             startActivity(intent)
         }
